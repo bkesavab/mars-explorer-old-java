@@ -52,6 +52,14 @@ public class Planet {
         return size;
     }
 
+    public void clearPosition(int x, int y) {
+        map.get(x).set(y, Position.FREE);
+    }
+
+    public Position inspect(int x, int y) {
+        return map.get(x).get(y);
+    }
+
     private Position genPosition(int i, int j) {
         Position[] positions = Position.values();
         int max = canBeObstacle(i, j) ? positions.length : (positions.length - 1);
