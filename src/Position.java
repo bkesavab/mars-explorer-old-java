@@ -1,7 +1,8 @@
 import java.util.Random;
 
 public enum Position {
-    FREE, ROCK;
+    // The ordering is important. See Planet.genPosition.
+    FREE, ROCK, OBSTACLE;
 
     public static Position choice() {
         Random rng = new Random();
@@ -16,6 +17,9 @@ public enum Position {
         }
         if (this == ROCK) {
             return "*";
+        }
+        if (this == OBSTACLE) {
+            return "X";
         }
         return "?";
     }
