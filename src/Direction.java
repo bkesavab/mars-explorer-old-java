@@ -1,4 +1,4 @@
 public enum Direction {
     // The ordering is important.
-    LEFT, UP, RIGHT, DOWN
+    LEFT, UP, RIGHT, DOWN //Creating directions
 }
